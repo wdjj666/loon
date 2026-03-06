@@ -8,8 +8,8 @@ disable-stun = true
 dns-reject-mode = LoopbackIP
 domain-reject-mode = DNS
 udp-fallback-mode = REJECT
-wifi-access-http-port = 7222
-wifi-access-socks5-port = 7221
+wifi-access-http-port = 5158
+wifi-access-socks5-port = 6468
 allow-wifi-access = false
 interface-mode = auto
 test-timeout = 5
@@ -61,9 +61,9 @@ DOMAIN,dl.wechat.com,REJECT
 FINAL,CloudProfit
 # ⛔️>>>>>>>>>>>大宝键666<<<<<<<<<<<<<<<⛔️
 [Remote Proxy]
-Scat = https://0b96e976-9ec3-44c0-aa2b-30bf8b0792ea.com/api/v1/client/subscribe?token=d4a71a1bb3106aa544c4251eeae790cf,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
-akk = https://dc1.taobaodc.com/link/FFm5rV7M1Qo0B26E?list=quantumultx,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=doc.text.below.ecg
-Lx = https://liangxin.xyz/api/v1/liangxin?OwO=b8bdd396bd20915e36c2596f4b52ee8c,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
+key = https://ss.shy521.com/s/43bb84c6ef77a4deb4a98f376fda4e90,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=doc.text.below.ecg
+kitty = https://conf1.hokkaido-toyoni.com/oosaka/3354c8c5543fd31976cf847f69717d4e,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
+Lx = https://liangxin.xyz/api/v1/liangxin?OwO=b71a3d670f859af1f7914579391793db,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
 # 🟢>>>>>>>>>>>本地脚本<<<<<<<<<<<<<<<🟢
 [Script]
 cron "0 0 * * *" script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js, timeout=10, tag=今日黄历, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/friDay.png
@@ -81,7 +81,7 @@ generic script-path=https://raw.githubusercontent.com/MCdasheng/Loon/main/Stream
 [Proxy Group]
 Other = select,CloudProfit,Global[Auto],Lowdelay,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
 Twitter = select,DIRECT,CloudProfit,Global[Auto],Lowdelay,香港节点,韩国节点,台湾节点,美国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
-TikTok = select,狮城节点,日本节点,美国节点,韩国节点,台湾节点,香港节点,Lowdelay,Global[Auto],CloudProfit,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png
+Tk/Th = select,狮城节点,日本节点,美国节点,韩国节点,台湾节点,香港节点,Lowdelay,Global[Auto],CloudProfit,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Threads.png
 Instagram = select,CloudProfit,Global[Auto],Lowdelay,香港节点,台湾节点,韩国节点,日本节点,狮城节点,美国节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
 Telegram = select,CloudProfit,Global[Auto],Lowdelay,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Tagged.png
 CloudProfit = select,Global[Auto],Lowdelay,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.google.com,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
@@ -101,11 +101,12 @@ Lowdelay = fallback,全部,url = http://www.gstatic.com/generate_204,interval = 
 # 🟢>>>>>>>>>>>规则分流<<<<<<<<<<<<<<<🟢
 [Remote Rule]
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=ChatGPT, tag=AI, enabled=true
+https://rule.kelee.one/Loon/Claude.lsr, policy=ChatGPT, tag=Claude, enabled=true
 https://raw.githubusercontent.com/yuumimi/rules/refs/heads/release/loon/apple-intelligence.txt, policy=ChatGPT, tag=AppleAI, enabled=true
 https://rule.kelee.one/Loon/YouTube.lsr, policy=Instagram, tag=YouTube, enabled=true
 https://rule.kelee.one/Loon/Twitter.lsr, policy=Twitter, tag=Twitter, enabled=true
-https://rule.kelee.one/Loon/TikTok.lsr, policy=TikTok, tag=Tiktok, enabled=true
-https://rule.kelee.one/Loon/Threads.lsr, policy=CloudProfit, tag=Threads, enabled=true
+https://rule.kelee.one/Loon/TikTok.lsr, policy=Tk/Th, tag=Tiktok, enabled=true
+https://rule.kelee.one/Loon/Threads.lsr, policy=Tk/Th, tag=Threads, enabled=true
 https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
 https://rule.kelee.one/Loon/Spotify.lsr, policy=Spotify, tag=Spotify, enabled=true
 https://rule.kelee.one/Loon/Reddit.lsr, policy=CloudProfit, tag=Reddit, enabled=true
@@ -120,20 +121,6 @@ https://rule.kelee.one/Loon/AppleProxy.lsr, policy=iCloud, tag=AppleProxy, enabl
 https://rule.kelee.one/Loon/BlockHttpDNS.lsr, policy=REJECT, tag=BlockHttpDNS, enabled=true
 https://github.com/VirgilClyne/GetSomeFries/raw/main/ruleset/HTTPDNS.Block.list, policy=REJECT, tag=HTTPDNS.Block, enabled=true
 https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list, policy=REJECT, tag=killAD, enabled=true
-https://rule.kelee.one/Loon/Alibaba.lsr, policy=DIRECT, tag=Alibaba, enabled=true
-https://rule.kelee.one/Loon/JingDong.lsr, policy=DIRECT, tag=JingDong, enabled=true
-https://rule.kelee.one/Loon/XiaoHongShu.lsr, policy=DIRECT, tag=XiaoHongShu, enabled=true
-https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
-https://rule.kelee.one/Loon/Tencent.lsr, policy=DIRECT, tag=Tencent, enabled=true
-https://rule.kelee.one/Loon/Sina.lsr, policy=DIRECT, tag=Sina, enabled=true
-https://rule.kelee.one/Loon/Pinduoduo.lsr, policy=DIRECT, tag=Pinduoduo, enabled=true
-https://rule.kelee.one/Loon/DouBan.lsr, policy=DIRECT, tag=DouBan, enabled=true
-https://rule.kelee.one/Loon/DouYin.lsr, policy=DIRECT, tag=DouYin, enabled=true
-https://rule.kelee.one/Loon/ChinaTelecom.lsr, policy=DIRECT, tag=ChinaTelecom, enabled=true
-https://rule.kelee.one/Loon/AppleID.lsr, policy=DIRECT, tag=AppleID, enabled=true
-https://rule.kelee.one/Loon/AppStore.lsr, policy=DIRECT, tag=AppStore, enabled=true
-https://rule.kelee.one/Loon/12306.lsr, policy=DIRECT, tag=12306, enabled=true
-https://rule.kelee.one/Loon/Blued.lsr, policy=DIRECT, tag=Blued, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestChina.lsr, policy=DIRECT, tag=SpeedtestChina, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr, policy=DIRECT, tag=SpeedtestInternational, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
