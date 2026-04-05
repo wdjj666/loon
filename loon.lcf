@@ -23,6 +23,20 @@ skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashly
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 # 🟢>>>>>>>>>>>本地规则<<<<<<<<<<<<<<<🟢
 [Rule]
+DOMAIN,666.xn--h5qy75o.vip,DIRECT
+DOMAIN,hbbx.top,DIRECT
+DOMAIN-SUFFIX,yuming.url,REJECT
+DOMAIN,api.revenuecat.com,ChatGPT
+DOMAIN,g79-102.gph.netease.com,DIRECT
+DOMAIN-SUFFIX,*.forgecdn.net,Other
+DOMAIN-SUFFIX,*.minecraft-services.net,Other
+DOMAIN-SUFFIX,*.playfabapi.com,Other
+DOMAIN,klpbbs.com,DIRECT
+DOMAIN,yfamilys.com,Other
+DOMAIN,admin-644727876-1155-ashirans-projects.vercel.app,Other
+DOMAIN-SUFFIX,*.backloop.dev,DIRECT
+DOMAIN,graph.facebook.com,Instagram
+DOMAIN,i.instagram.com,Instagram
 DOMAIN,liangxin.xyz,DIRECT
 DOMAIN-SUFFIX,taobaodc.com,DIRECT
 # === 其他站点分流 ===
@@ -56,13 +70,14 @@ DOMAIN-SUFFIX,boyfriend.show,Other
 DOMAIN-SUFFIX,immersivetranslate.com,Other
 # === 拦截规则 (Reject) ===
 IP-CIDR,149.88.82.119/32,REJECT
+DOMAIN,dldir1v6.qq.com,REJECT
+DOMAIN,dldir1.qq.com,REJECT
 DOMAIN,dl.wechat.com,REJECT
 # === 兜底规则 ===
 FINAL,CloudProfit
 # ⛔️>>>>>>>>>>>大宝键666<<<<<<<<<<<<<<<⛔️
 [Remote Proxy]
-key = https://ss.shy521.com/s/43bb84c6ef77a4deb4a98f376fda4e90,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=doc.text.below.ecg
-kitty = https://conf1.hokkaido-toyoni.com/oosaka/3354c8c5543fd31976cf847f69717d4e,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
+Akk = https://dca.taobaodc.com/link/e8t4G16k3lUeCxXI?list=quantumultx,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
 Lx = https://liangxin.xyz/api/v1/liangxin?OwO=b71a3d670f859af1f7914579391793db,parser-enabled = true,udp=true,block-quic=true,fast-open=true,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
 # 🟢>>>>>>>>>>>本地脚本<<<<<<<<<<<<<<<🟢
 [Script]
@@ -101,19 +116,23 @@ Lowdelay = fallback,全部,url = http://www.gstatic.com/generate_204,interval = 
 # 🟢>>>>>>>>>>>规则分流<<<<<<<<<<<<<<<🟢
 [Remote Rule]
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=ChatGPT, tag=AI, enabled=true
-https://rule.kelee.one/Loon/Claude.lsr, policy=ChatGPT, tag=Claude, enabled=true
+https://rule.kelee.one/Loon/Gemini.lsr, policy=ChatGPT, tag=Gemini.lsr, enabled=true
+https://rule.kelee.one/Loon/Google.lsr, policy=Other, tag=Google.lsr, enabled=true
 https://raw.githubusercontent.com/yuumimi/rules/refs/heads/release/loon/apple-intelligence.txt, policy=ChatGPT, tag=AppleAI, enabled=true
-https://rule.kelee.one/Loon/YouTube.lsr, policy=Instagram, tag=YouTube, enabled=true
+https://rule.kelee.one/Loon/Claude.lsr, policy=ChatGPT, tag=Claude, enabled=true
+https://rule.kelee.one/Loon/Instagram.lsr, policy=Instagram, tag=Instagram.lsr, enabled=true
+https://rule.kelee.one/Loon/Microsoft.lsr, policy=Other, tag=Microsoft.lsr, enabled=true
+https://rule.kelee.one/Loon/YouTube.lsr, policy=Tk/Th, tag=YouTube, enabled=true
 https://rule.kelee.one/Loon/Twitter.lsr, policy=Twitter, tag=Twitter, enabled=true
 https://rule.kelee.one/Loon/TikTok.lsr, policy=Tk/Th, tag=Tiktok, enabled=true
 https://rule.kelee.one/Loon/Threads.lsr, policy=Tk/Th, tag=Threads, enabled=true
 https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
 https://rule.kelee.one/Loon/Spotify.lsr, policy=Spotify, tag=Spotify, enabled=true
 https://rule.kelee.one/Loon/Reddit.lsr, policy=CloudProfit, tag=Reddit, enabled=true
-https://rule.kelee.one/Loon/Pinterest.lsr, policy=CloudProfit, tag=Pinterest, enabled=true
+https://rule.kelee.one/Loon/Pinterest.lsr, policy=Other, tag=Pinterest, enabled=true
 https://rule.kelee.one/Loon/Picacg.lsr, policy=atlasmix, tag=Picacg, enabled=true
 https://rule.kelee.one/Loon/OpenAI.lsr, policy=ChatGPT, tag=OpenAI, enabled=true
-https://rule.kelee.one/Loon/Netflix.lsr, policy=Instagram, tag=Netflix, enabled=true
+https://rule.kelee.one/Loon/Netflix.lsr, policy=Tk/Th, tag=Netflix, enabled=true
 https://rule.kelee.one/Loon/GitHub.lsr, policy=CloudProfit, tag=GitHub, enabled=true
 https://rule.kelee.one/Loon/Cloudflare.lsr, policy=CloudProfit, tag=Cloudflare, enabled=true
 https://rule.kelee.one/Loon/BiliBili.lsr, policy=bilibili, tag=BiliBili, enabled=true
