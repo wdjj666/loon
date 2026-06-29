@@ -23,6 +23,8 @@ skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashly
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 # 🟢>>>>>>>>>>>本地规则<<<<<<<<<<<<<<<🟢
 [Rule]
+DOMAIN,proxy-oss.25mao.com,Other
+DOMAIN,moments.irisgw.cn,美国节点
 DOMAIN,182.254.116.117,DIRECT
 IP-CIDR,182.254.116.117/32,DIRECT
 DOMAIN,sese.ssxz.org,DIRECT
@@ -85,7 +87,7 @@ FINAL,CloudProfit
 [Remote Proxy]
 SE = https://sese.ssxz.org/zimo/ssxz/subxd?token=2e0309aad8ec5d446cb83d095a21397c,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png
 Akk = https://dckv.taobaodc.com/link/bdu0dca09PrsmabG?list=quantumultx,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
-Lx = https://liangxin.xyz/api/v1/liangxin?OwO=7eefde8af089042148a1af3c44b09d07,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
+Lx = https://liangxin.xyz/api/v1/liangxin?OwO=5979d3d6269ac3334d74a7e038ee6756,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
 # 🟢>>>>>>>>>>>本地脚本<<<<<<<<<<<<<<<🟢
 [Script]
 cron "0 0 * * *" script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js, timeout=10, tag=今日黄历, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/friDay.png
@@ -101,7 +103,7 @@ generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig
 generic script-path=https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js, timeout=10, tag=GPTCheck, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1818292.png
 # 🟢>>>>>>>>>>>功能策略<<<<<<<<<<<<<<<🟢
 [Proxy Group]
-订阅组 = url-test,SE,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/FI.png
+订阅组 = select,SE,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/FI.png
 Other = select,CloudProfit,Global[Auto],Lowdelay,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
 Twitter = select,DIRECT,CloudProfit,Global[Auto],Lowdelay,香港节点,韩国节点,台湾节点,美国节点,日本节点,狮城节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 Tk/Th = select,狮城节点,日本节点,美国节点,韩国节点,台湾节点,香港节点,Lowdelay,Global[Auto],CloudProfit,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Threads.png
