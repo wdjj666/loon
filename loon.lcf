@@ -7,26 +7,27 @@ sni-sniffing = true
 disable-stun = true
 dns-reject-mode = LoopbackIP
 domain-reject-mode = DNS
-udp-fallback-mode = REJECT
+udp-fallback-mode = DIRECT
 wifi-access-http-port = 5158
 wifi-access-socks5-port = 6468
 allow-wifi-access = false
 interface-mode = auto
 test-timeout = 5
-disconnect-on-policy-change = false
+disconnect-on-policy-change = true
 internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
 proxy-test-url = http://www.gstatic.com/generate_204
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
 ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
-skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com,*.qq.com,game.eve.mdt.qq.com,cn.voice.gcloudcs.com,faasdev.native.qq.com,oth.bls.mdt.qq.com,thirdqq.qlogo.cn,182.254.116.117,cn.voice.gcloudcs.com,game.str.mdt.qq.com,157.255.209.120,27.44.123.114
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32,120.233.38.96,112.19.199.77,120.233.38.14,120.233.51.170,182.254.116.117,17.253.60.37,17.253.114.43,120.223.250.233,157.255.209.120,27.44.123.114,120.223.250.233
 # 🟢>>>>>>>>>>>本地规则<<<<<<<<<<<<<<<🟢
 [Rule]
+DOMAIN,media-qhxn-fj-home.qh6oss.ctyunxs.cn,DIRECT
+IP-CIDR,182.254.116.117/32,DIRECT
 DOMAIN,proxy-oss.25mao.com,Other
 DOMAIN,moments.irisgw.cn,美国节点
 DOMAIN,182.254.116.117,DIRECT
-IP-CIDR,182.254.116.117/32,DIRECT
 DOMAIN,sese.ssxz.org,DIRECT
 DOMAIN,push.clients6.google.com,ChatGPT
 DOMAIN,play.googleapis.com,ChatGPT
@@ -85,9 +86,9 @@ DOMAIN,dl.wechat.com,REJECT
 FINAL,CloudProfit
 # ⛔️>>>>>>>>>>>大宝键666<<<<<<<<<<<<<<<⛔️
 [Remote Proxy]
-SE = https://sese.ssxz.org/zimo/ssxz/subxd?token=2e0309aad8ec5d446cb83d095a21397c,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png
-Akk = https://dckv.taobaodc.com/link/bdu0dca09PrsmabG?list=quantumultx,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
-Lx = https://liangxin.xyz/api/v1/liangxin?OwO=5979d3d6269ac3334d74a7e038ee6756,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
+SE = https://sese.ssxz.org/zimo/ssxz/subxd?token=961ae9d8c308e109a78abe47f8be311b,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png
+Akk = https://pjsack.taobaodc.com/link/nPzk7UFpc7WbEYk8?,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
+Lx = https://liangxin.xyz/api/v1/liangxin?OwO=f672fb7ce83d8b4b888cdacdfaab0487,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
 # 🟢>>>>>>>>>>>本地脚本<<<<<<<<<<<<<<<🟢
 [Script]
 cron "0 0 * * *" script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js, timeout=10, tag=今日黄历, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/friDay.png
@@ -115,7 +116,7 @@ atlasmix = select,香港节点,台湾节点,美国节点,韩国节点,日本节�
 ChatGPT = select,DIRECT,美国节点,日本节点,香港节点,台湾节点,韩国节点,狮城节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Myspace.png
 iCloud = select,日本节点,狮城节点,韩国节点,美国节点,台湾节点,香港节点,Global[Auto],DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Account.png
 bilibili = select,DIRECT,Global[Auto],Lowdelay,香港节点,台湾节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
-Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
+Global[Auto] = url-test,Lx,Akk,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
 Lowdelay = fallback,全部,url = http://www.gstatic.com/generate_204,interval = 120,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Buzznet.png
 香港节点 = url-test,香港,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 台湾节点 = url-test,台湾,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
@@ -131,6 +132,7 @@ https://raw.githubusercontent.com/yuumimi/rules/refs/heads/release/loon/apple-in
 https://rule.kelee.one/Loon/Claude.lsr, policy=ChatGPT, tag=Claude, enabled=true
 https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/loon/apns.list, policy=Other, tag=apns.list, enabled=true
 https://rule.kelee.one/Loon/Instagram.lsr, policy=Instagram, tag=Instagram.lsr, enabled=true
+https://rule.kelee.one/Loon/BiliBili.lsr, policy=bilibili, tag=BiliBili.lsr, enabled=true
 https://rule.kelee.one/Loon/Microsoft.lsr, policy=Other, tag=Microsoft.lsr, enabled=true
 https://rule.kelee.one/Loon/YouTube.lsr, policy=Tk/Th, tag=YouTube, enabled=true
 https://rule.kelee.one/Loon/Twitter.lsr, policy=Twitter, tag=Twitter, enabled=true
@@ -145,7 +147,6 @@ https://rule.kelee.one/Loon/OpenAI.lsr, policy=ChatGPT, tag=OpenAI, enabled=true
 https://rule.kelee.one/Loon/Netflix.lsr, policy=Tk/Th, tag=Netflix, enabled=true
 https://rule.kelee.one/Loon/GitHub.lsr, policy=CloudProfit, tag=GitHub, enabled=true
 https://rule.kelee.one/Loon/Cloudflare.lsr, policy=CloudProfit, tag=Cloudflare, enabled=true
-https://rule.kelee.one/Loon/BiliBili.lsr, policy=bilibili, tag=BiliBili, enabled=true
 https://rule.kelee.one/Loon/AppleProxy.lsr, policy=iCloud, tag=AppleProxy, enabled=true
 https://rule.kelee.one/Loon/BlockHttpDNS.lsr, policy=REJECT, tag=BlockHttpDNS, enabled=true
 https://github.com/VirgilClyne/GetSomeFries/raw/main/ruleset/HTTPDNS.Block.list, policy=REJECT, tag=HTTPDNS.Block, enabled=true
@@ -209,13 +210,13 @@ https://github.com/Moli-X/Tool/raw/X/Loon/Plugin/Kelee/Spotify.plugin, tag=Spoti
 https://kelee.one/Tool/Loon/Lpx/SodaMusic_remove_ads.lpx, enabled=true
 https://github.com/BiliUniverse/ADBlock/releases/latest/download/BiliBili.ADBlock.plugin, enabled=true
 https://github.com/BiliUniverse/Redirect/releases/latest/download/BiliBili.Redirect.plugin, enabled=true
-https://github.com/BiliUniverse/Global/releases/latest/download/BiliBili.Global.plugin, enabled=true
 https://github.com/BiliUniverse/Enhanced/releases/latest/download/BiliBili.Enhanced.plugin, enabled=true
 https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
 https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Module/mediadown.sgmodule, img-url=square.and.arrow.down.on.square, enabled=false
 # 🟢>>>>>>>>>>>映射功能<<<<<<<<<<<<<<<🟢
 [Host]
+*.qq.com = server:119.29.29.29
 iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
 downloaddispatch.itunes.apple.com = downloaddispatch.itunes.apple.com.download.ks-cdn.com
 updates.g.aaplimg.com = updates.cdn-apple.com.download.ks-cdn.com
