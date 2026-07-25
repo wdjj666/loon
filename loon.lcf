@@ -1,30 +1,30 @@
 # 🟢>>>>>>>>>>>基本设置<<<<<<<<<<<<<<<🟢
 [General]
-ip-mode = v4-only
 ipv6-vif = off
+test-timeout = 5
+ip-mode = v4-only
 dns-server = system
 sni-sniffing = true
 disable-stun = true
-dns-reject-mode = LoopbackIP
+interface-mode = auto
 domain-reject-mode = DNS
+allow-wifi-access = false
 udp-fallback-mode = REJECT
+dns-reject-mode = LoopbackIP
 wifi-access-http-port = 5158
 wifi-access-socks5-port = 6468
-allow-wifi-access = false
-interface-mode = auto
-test-timeout = 5
 disconnect-on-policy-change = false
 internet-test-url = https://www.gstatic.com/generate_204
 proxy-test-url = https://www.gstatic.com/generate_204
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
 ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
-skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com,*.qq.com,game.eve.mdt.qq.com,cn.voice.gcloudcs.com,faasdev.native.qq.com,oth.bls.mdt.qq.com,thirdqq.qlogo.cn,182.254.116.117,cn.voice.gcloudcs.com,game.str.mdt.qq.com,157.255.209.120,27.44.123.114
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32,120.233.38.96,112.19.199.77,120.233.38.14,120.233.51.170,182.254.116.117,17.253.60.37,17.253.114.43,120.223.250.233,157.255.209.120,27.44.123.114,120.233.50.211,120.233.38.99,120.233.38.93,36.155.209.196,112.60.22.111,120.233.16.238,36.155.230.28,112.60.24.81,36.155.231.140,36.155.242.141,120.233.16.216,111.32.207.88,120.233.48.18,120.233.48.102,120.233.48.80,112.60.24.39,112.60.22.23,112.60.24.11,112.48.230.137,36.159.60.71,120.241.200.253,112.60.23.167
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.168.0.0/16
 # 🟢>>>>>>>>>>>本地规则<<<<<<<<<<<<<<<🟢
 [Rule]
 # ==============================
-# 腾讯游戏 / 国内游戏直连
+# 腾讯游戏直连
 # ==============================
 DOMAIN-SUFFIX,qq.com,DIRECT
 DOMAIN-SUFFIX,tencent.com,DIRECT
@@ -32,13 +32,14 @@ DOMAIN-SUFFIX,gtimg.com,DIRECT
 DOMAIN-SUFFIX,gtimg.cn,DIRECT
 DOMAIN-SUFFIX,qpic.cn,DIRECT
 DOMAIN-SUFFIX,igamecj.com,DIRECT
-DOMAIN-SUFFIX,tencent-cloud.com,DIRECT
-DOMAIN-SUFFIX,wegame.com,DIRECT
-DOMAIN-SUFFIX,gtimg.com,DIRECT
 DOMAIN-SUFFIX,igame.qq.com,DIRECT
+DOMAIN-SUFFIX,tencent-cloud.com,DIRECT
 DOMAIN-SUFFIX,tencent-cloud.net,DIRECT
-# 腾讯游戏服务器IP（常见）
-IP-CIDR,182.254.116.117/32,DIRECT
+DOMAIN-SUFFIX,wegame.com,DIRECT
+# 腾讯游戏常用IP
+IP-CIDR,182.254.0.0/16,DIRECT
+IP-CIDR,120.233.0.0/16,DIRECT
+IP-CIDR,112.60.0.0/16,DIRECT
 # ==============================
 # 国内服务直连
 # ==============================
@@ -47,86 +48,52 @@ DOMAIN-SUFFIX,taobaodc.com,DIRECT
 DOMAIN-SUFFIX,jsdelivr.net,DIRECT
 DOMAIN,media-qhxn-fj-home.qh6oss.ctyunxs.cn,DIRECT
 DOMAIN,dc.sigmob.cn,DIRECT
+DOMAIN,support.lcsignx.com,DIRECT
 DOMAIN,apmplus.volces.com,DIRECT
 DOMAIN,httpdns.volcengineapi.com,DIRECT
-DOMAIN,klpbbs.com,DIRECT
-DOMAIN,liangxin.xyz,DIRECT
-DOMAIN,dalao.ru,DIRECT
-DOMAIN-SUFFIX,25mao.com,DIRECT
-DOMAIN-SUFFIX,chq70kpri.com,DIRECT
 # ==============================
-# Apple 服务
+# Apple
 # ==============================
 DOMAIN-SUFFIX,apple.com,DIRECT
 DOMAIN-SUFFIX,icloud.com,DIRECT
 DOMAIN-SUFFIX,appattest.apple.com,DIRECT
 DOMAIN,sync.itunes.apple.com,DIRECT
 # ==============================
-# ChatGPT / OpenAI
+# OpenAI
 # ==============================
 DOMAIN-SUFFIX,openai.com,ChatGPT
 DOMAIN-SUFFIX,chatgpt.com,ChatGPT
 DOMAIN-SUFFIX,oaistatic.com,ChatGPT
 DOMAIN-SUFFIX,oaiusercontent.com,ChatGPT
-# Google AI相关
-DOMAIN,push.clients6.google.com,ChatGPT
-DOMAIN,play.googleapis.com,ChatGPT
 # ==============================
-# 社交媒体
+# 社交
 # ==============================
 DOMAIN,graph.facebook.com,Instagram
 DOMAIN,i.instagram.com,Instagram
 DOMAIN-SUFFIX,instagram.com,Instagram
 # ==============================
-# 游戏/微软服务
-# ==============================
-DOMAIN-SUFFIX,minecraft-services.net,Other
-DOMAIN-SUFFIX,playfabapi.com,Other
-DOMAIN,g79-102.gph.netease.com,DIRECT
-# ==============================
-# 国际站点
+# 国际网站
 # ==============================
 DOMAIN-SUFFIX,18comic.vip,台湾节点
 DOMAIN,ehgt.org,atlasmix
 DOMAIN-SUFFIX,picacomic.com,atlasmix
 DOMAIN-SUFFIX,e-hentai.org,atlasmix
 DOMAIN-SUFFIX,hentai.org,atlasmix
-DOMAIN-SUFFIX,myreadingmanga.info,Other
-DOMAIN-SUFFIX,boyfriend.show,Other
-DOMAIN-SUFFIX,immersivetranslate.com,Other
 # ==============================
-# 代理/其他节点
-# ==============================
-DOMAIN,xn--9kqz23b19z.com,Other
-DOMAIN,proxy-oss.25mao.com,Other
-DOMAIN,moments.irisgw.cn,美国节点
-DOMAIN,sese.ssxz.org,DIRECT
-DOMAIN-SUFFIX,forgecdn.net,Other
-DOMAIN-SUFFIX,clevertap-prod.com,CloudProfit
-DOMAIN-KEYWORD,kelee.one,CloudProfit
-DOMAIN,hlo.fp394.top,Other
-DOMAIN,brt.mrf54.top,Other
-DOMAIN,mygaysites.com,Other
-DOMAIN,pan.hbbx.top,DIRECT
-DOMAIN-SUFFIX,backloop.dev,DIRECT
-DOMAIN,admin-644727876-1155-ashirans-projects.vercel.app,Other
-DOMAIN-SUFFIX,axkaajanetwork.com,Other
-DOMAIN,cdn.sa.net,Other
-DOMAIN,shop.tiandan.shop,DIRECT
-DOMAIN,affman.m2net.cc,DIRECT
-# ==============================
-# 广告/垃圾请求拦截
+# 广告拦截
 # ==============================
 DOMAIN-SUFFIX,yuming.url,REJECT
-DOMAIN,dldir1v6.qq.com,REJECT
 DOMAIN,dldir1.qq.com,REJECT
+DOMAIN,dldir1v6.qq.com,REJECT
 DOMAIN,dl.wechat.com,REJECT
 IP-CIDR,149.88.82.119/32,REJECT
 # ==============================
-# 其他流量
+# 其他代理
 # ==============================
-FINAL,Other
-# === 兜底规则 ===
+DOMAIN-SUFFIX,forgecdn.net,Other
+DOMAIN-SUFFIX,clevertap-prod.com,CloudProfit
+DOMAIN-KEYWORD,kelee.one,CloudProfit
+# ==============================
 FINAL,CloudProfit
 # ⛔️>>>>>>>>>>>大宝键666<<<<<<<<<<<<<<<⛔️
 [Remote Proxy]
@@ -194,6 +161,8 @@ https://rule.kelee.one/Loon/Cloudflare.lsr, policy=CloudProfit, tag=Cloudflare, 
 https://rule.kelee.one/Loon/AppleProxy.lsr, policy=iCloud, tag=AppleProxy, enabled=true
 https://rule.kelee.one/Loon/BlockHttpDNS.lsr, policy=REJECT, tag=BlockHttpDNS, enabled=true
 https://github.com/VirgilClyne/GetSomeFries/raw/main/ruleset/HTTPDNS.Block.list, policy=REJECT, tag=HTTPDNS.Block, enabled=true
+https://github.com/Moli-X/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=KillAD, enabled=true
+https://adrules.top/adrules.list, policy=REJECT, tag=KillAD, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestChina.lsr, policy=DIRECT, tag=SpeedtestChina, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr, policy=DIRECT, tag=SpeedtestInternational, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
@@ -259,7 +228,6 @@ https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
 https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Module/mediadown.sgmodule, img-url=square.and.arrow.down.on.square, enabled=false
 # 🟢>>>>>>>>>>>映射功能<<<<<<<<<<<<<<<🟢
 [Host]
-*.qq.com = server:119.29.29.29
 apd-pcdnvodstat.teg.tencent-cloud.net = server:119.29.29.29
 iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
 downloaddispatch.itunes.apple.com = downloaddispatch.itunes.apple.com.download.ks-cdn.com
