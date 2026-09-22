@@ -2,18 +2,18 @@
 [General]
 ipv6-vif = off
 test-timeout = 5
-ip-mode = v4-only
-dns-server = system
+ip-mode = dual
+dns-server = system,119.29.29.29,223.5.5.5
 sni-sniffing = true
-disable-stun = true
+disable-stun = false
 interface-mode = auto
 domain-reject-mode = DNS
 allow-wifi-access = false
-udp-fallback-mode = REJECT
+udp-fallback-mode = DIRECT
 mitm-on-wifi-access = false
 dns-reject-mode = LoopbackIP
-wifi-access-http-port = 5158
-wifi-access-socks5-port = 6468
+wifi-access-http-port = 6666
+wifi-access-socks5-port = 6969
 disconnect-on-policy-change = false
 internet-test-url = https://www.gstatic.com/generate_204
 proxy-test-url = https://www.gstatic.com/generate_204
@@ -24,10 +24,6 @@ skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.168.0.0/16
 # 🟢>>>>>>>>>>>本地规则<<<<<<<<<<<<<<<🟢
 [Rule]
-DOMAIN-SUFFIX,taobaodc.com,Other
-DOMAIN-SUFFIX,myreadingmanga.info,atlasmix
-DOMAIN-SUFFIX,cdnhth.club,atlasmix
-DOMAIN,aweme.snssdk.com,DIRECT
 # ==============================
 # 腾讯游戏直连
 # ==============================
@@ -51,6 +47,7 @@ IP-CIDR,112.60.0.0/16,DIRECT
 # ==============================
 # 国内服务直连
 # ==============================
+DOMAIN,aweme.snssdk.com,DIRECT
 DOMAIN-SUFFIX,taobaocdn.com,DIRECT
 DOMAIN-SUFFIX,taobaodc.com,DIRECT
 DOMAIN-SUFFIX,jsdelivr.net,DIRECT
@@ -91,8 +88,11 @@ DOMAIN-SUFFIX,iturrit.com,Telegram
 # ==============================
 # 国际网站
 # ==============================
-DOMAIN-SUFFIX,18comic.vip,台湾节点
 DOMAIN,ehgt.org,atlasmix
+DOMAIN-SUFFIX,18comic.vip,台湾节点
+DOMAIN-SUFFIX,taobaodc.com,Other
+DOMAIN-SUFFIX,myreadingmanga.info,atlasmix
+DOMAIN-SUFFIX,cdnhth.club,atlasmix
 DOMAIN-SUFFIX,picacomic.com,atlasmix
 DOMAIN-SUFFIX,e-hentai.org,atlasmix
 DOMAIN-SUFFIX,hentai.org,atlasmix
@@ -109,7 +109,7 @@ FINAL,CloudProfit
 # ⛔️>>>>>>>>>>>大宝键666<<<<<<<<<<<<<<<⛔️
 [Remote Proxy]
 fly = https://ft.tutunode.com/ft/tk/8ee4bf905cfa32746506dc53ffb4d9df,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=true,enabled=false,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png
-Akk = https://dsfbsb.taobaodc.com/link/vsHsOV6g3WI1NrpB?list=shadowrocket,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
+Kitty = https://m1.tohno-1.top/oosaka/3354c8c5543fd31976cf847f69717d4e,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
 Lx = https://liangxin.xyz/api/v1/liangxin?OwO=5577fa7baa4c2b57a121e097b0cd376e,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
 # 🟢>>>>>>>>>>>本地脚本<<<<<<<<<<<<<<<🟢
 [Script]
@@ -138,7 +138,7 @@ ChatGPT = select,DIRECT,美国节点,日本节点,香港节点,台湾节点,韩�
 iCloud = select,日本节点,狮城节点,韩国节点,美国节点,台湾节点,香港节点,Global[Auto],DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Account.png
 bilibili = select,DIRECT,Global[Auto],Lowdelay,香港节点,台湾节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
 Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
-Lowdelay = select,fly,Akk,Lx,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Buzznet.png
+Lowdelay = select,fly,Kitty,Lx,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Buzznet.png
 香港节点 = url-test,香港,url = http://www.gstatic.com/generate_204,interval = 7200,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 台湾节点 = url-test,台湾,url = http://www.gstatic.com/generate_204,interval = 7200,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 美国节点 = url-test,美国,url = http://www.gstatic.com/generate_204,interval = 7200,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
@@ -147,6 +147,7 @@ Lowdelay = select,fly,Akk,Lx,url = http://www.gstatic.com/generate_204,img-url =
 狮城节点 = url-test,狮城,url = http://www.gstatic.com/generate_204,interval = 7200,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/American_Samoa.png
 # 🟢>>>>>>>>>>>规则分流<<<<<<<<<<<<<<<🟢
 [Remote Rule]
+https://github.com/VirgilClyne/GetSomeFries/raw/main/ruleset/HTTPDNS.Block.list, policy=REJECT, tag=HTTPDNS, enabled=true
 https://github.com/Moli-X/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=KillAD, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=ChatGPT, tag=AI, enabled=true
 https://rule.kelee.one/Loon/Gemini.lsr, policy=ChatGPT, tag=Gemini.lsr, enabled=true
@@ -181,12 +182,12 @@ https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN, enab
 [Remote Script]
 # 🟢>>>>>>>>>>>插件模块<<<<<<<<<<<<<<<🟢
 [Plugin]
-https://ddgksf2013.top/module/ScriptHub.Loon.plugin, tag=墨鱼增强, enabled=true
-https://kelee.one/Tool/Loon/Lpx/TelegramRedirect.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
+https://ddgksf2013.top/module/ScriptHub.Loon.plugin, tag=墨鱼增强, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TelegramRedirect.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=CloudProfit, pin=true, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin, pin=true, enabled=true
 https://raw.githubusercontent.com/mphin/proxy_tools/main/loon/plugin/github.plugin, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/github.png, enabled=true
 https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.lpx, enabled=true
 https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Maps.plugin, enabled=true
