@@ -113,16 +113,16 @@ Kitty = https://m1.tohno-1.top/oosaka/3354c8c5543fd31976cf847f69717d4e,parser-en
 Lx = https://liangxin.xyz/api/v1/liangxin?OwO=5577fa7baa4c2b57a121e097b0cd376e,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
 # 🟢>>>>>>>>>>>本地脚本<<<<<<<<<<<<<<<🟢
 [Script]
-cron "0 0 * * *" script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js, timeout=10, tag=今日黄历, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/friDay.png
-cron "10 6 * * *" script-path=https://raw.githubusercontent.com/deezertidal/private/main/tv.js, timeout=10, tag=电视热度榜, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/QQvideo.png
-cron "12 7 * * *" script-path=https://raw.githubusercontent.com/deezertidal/private/main/histoday.js, timeout=10, tag=历史上的今天, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/friDay.png
-generic script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/tools/NodeUnlockDetection.js, timeout=20, tag=节点解锁查询, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
-generic script-path=https://raw.githubusercontent.com/getsomecat/Loon/main/Net_Speedlite.js, timeout=10, tag=网络延迟测试, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1643998.png
-generic script-path=https://github.com/Keywos/rule/raw/main/loon/ipapi2.js, timeout=10, tag=测试位置查询, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/2921096.png
-generic script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/tools/LocationDetection.js, timeout=10, tag=地理位置查询, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/in.png
-generic script-path=https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/Spotify.js, timeout=10, tag=SpotifyCheck, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/spotify.png
-generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js, timeout=10, tag=GeoLocation, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1249982.png
-generic script-path=https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js, timeout=10, tag=GPTCheck, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1818292.png
+cron "0 0 * * *" then script("https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js") with tag="今日黄历", img_url="https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/friDay.png", timeout=10
+cron "10 6 * * *" then script("https://raw.githubusercontent.com/deezertidal/private/main/tv.js") with tag="电视热度榜", img_url="https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/QQvideo.png", timeout=10
+cron "12 7 * * *" then script("https://raw.githubusercontent.com/deezertidal/private/main/histoday.js") with tag="历史上的今天", img_url="https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/friDay.png", timeout=10
+generic then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/tools/NodeUnlockDetection.js") with tag="节点解锁查询", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png", timeout=20
+generic then script("https://raw.githubusercontent.com/getsomecat/Loon/main/Net_Speedlite.js") with tag="网络延迟测试", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1643998.png", timeout=10
+generic then script("https://github.com/Keywos/rule/raw/main/loon/ipapi2.js") with tag="测试位置查询", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/2921096.png", timeout=10
+generic then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/tools/LocationDetection.js") with tag="地理位置查询", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/in.png", timeout=10
+generic then script("https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/Spotify.js") with tag="SpotifyCheck", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/spotify.png", timeout=10
+generic then script("https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js") with tag="GeoLocation", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1249982.png", timeout=10
+generic then script("https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js") with tag="GPTCheck", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1818292.png", timeout=10
 # 🟢>>>>>>>>>>>功能策略<<<<<<<<<<<<<<<🟢
 [Proxy Group]
 订阅组 = select,Lx,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/FI.png
@@ -237,6 +237,7 @@ https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
 https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Module/mediadown.sgmodule, img-url=square.and.arrow.down.on.square, enabled=true
 # 🟢>>>>>>>>>>>映射功能<<<<<<<<<<<<<<<🟢
 [Host]
+iosapps.itunes.apple.com = hls.itunes.apple.com.mwcname.com
 # 🟢>>>>>>>>>>>节点筛选<<<<<<<<<<<<<<<🟢
 [Remote Filter]
 全部 = NameRegex, FilterKey = "^(?!.*网易云)"
@@ -249,9 +250,9 @@ https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Module/mediadown.sg
 # 🟢>>>>>>>>>>>其他配置<<<<<<<<<<<<<<<🟢
 [Proxy]
 [Rewrite]
-^https:\/\/(raw|gist)\.githubusercontent\.com\/ header-replace Accept-Language en-us
-^https:\/\/github\.com\/ header-replace Accept-Language en-us
-^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
+request if ${url} ~= /^https:\/\/(raw|gist)\.githubusercontent\.com\//i then request.header.set("Accept-Language", "en-us")
+request if ${url} ~= /^https:\/\/github\.com\//i then request.header.set("Accept-Language", "en-us")
+request if ${url} ~= /^https?:\/\/(www.)?(g|google)\.cn/i then redirect(302, "https://www.google.com")
 [Remote Rewrite]
 # 🟢>>>>>>>>>>>证书MITM<<<<<<<<<<<<<<🟢
 [MITM]
