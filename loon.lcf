@@ -4,16 +4,14 @@
 # ==============================
 [General]
 ipv6-vif = off
-test-timeout = 3
+test-timeout = 5
 ip-mode = v4-only
 dns-server = system,119.29.29.29,223.5.5.5
-doh-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query
 sni-sniffing = true
 allow-udp-proxy = true
-disable-stun = true
+disable-stun = false
 interface-mode = auto
 fast-switch = true
-switch-node-after-failure-times = 2
 domain-reject-mode = Request
 allow-wifi-access = false
 udp-fallback-mode = DIRECT
@@ -25,7 +23,7 @@ disconnect-on-policy-change = false
 internet-test-url = http://wifi.vivo.com.cn/generate_204
 proxy-test-url = http://www.gstatic.com/generate_204
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
-geoip-url = https://rawstatic.com/loyalsoldier/geoip/release/GeoLite2-Country.mmdb
+geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
 ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
 skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,127.0.0.1/32,localhost,*.local
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
@@ -43,7 +41,6 @@ IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
 DOMAIN-SUFFIX,igamecj.com,DIRECT
 DOMAIN-SUFFIX,igame.qq.com,DIRECT
 DOMAIN-SUFFIX,gcloudsys.com,DIRECT
-DOMAIN-SUFFIX,gcloud.com,DIRECT
 DOMAIN-SUFFIX,tgp.qq.com,DIRECT
 DOMAIN-SUFFIX,bugly.qq.com,DIRECT
 # 腾讯游戏 / 腾讯云相关
@@ -67,10 +64,11 @@ DOMAIN-SUFFIX,taobaocdn.com,DIRECT
 DOMAIN-SUFFIX,taobaodc.com,DIRECT
 DOMAIN-SUFFIX,jsdelivr.net,DIRECT
 DOMAIN-SUFFIX,lcsignx.com,DIRECT
-DOMAIN,httpdns.volcengineapi.com,DIRECT
-DOMAIN,apmplus.volces.com,DIRECT
 DOMAIN,dc.sigmob.cn,DIRECT
+DOMAIN,apmplus.volces.com,DIRECT
+DOMAIN,httpdns.volcengineapi.com,DIRECT
 DOMAIN,wclg.art,DIRECT
+DOMAIN,box-api.25mao.com,DIRECT
 DOMAIN,liangxin.xyz,DIRECT
 IP-CIDR,179.253.224.244/32,DIRECT,no-resolve
 # ==============================
@@ -123,11 +121,11 @@ DOMAIN,dl.wechat.com,REJECT
 IP-CIDR,149.88.82.119/32,REJECT
 # ==============================
 FINAL,DIRECT
-# ⛔️>>>>>>>>>>> By enen <<<<<<<<<<<<<<<⛔️
+# ⛔️>>>>>>>>>>>大宝键666<<<<<<<<<<<<<<<⛔️
 [Remote Proxy]
-flowers = https://api-huacloud.com/sub?target=loon&insert=true&emoji=true&tfo=true&filename=Flower_Trojan&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Ftoken2%3Dypvw85zy-ec4de8428cu7ed0mbo,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png
-Kitty = https://m1.tohno-1.top/oosaka/3354c8c5543fd31976cf847f69717d4e,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png
-Lx = https://liangxin.xyz/api/v1/liangxin?OwO=5577fa7baa4c2b57a121e097b0cd376e,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png
+flowers = https://api-huacloud.com/sub?target=loon&insert=true&emoji=true&tfo=true&filename=Flower_Trojan&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Ftoken2%3Dypvw85zy-ec4de8428cu7ed0mbo,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=true,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png,server-dns="223.5.5.5"
+Kitty = https://m1.tohno-1.top/oosaka/3354c8c5543fd31976cf847f69717d4e,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png,server-dns="223.5.5.5"
+Lx = https://liangxin.xyz/api/v1/liangxin?OwO=5577fa7baa4c2b57a121e097b0cd376e,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png,server-dns="223.5.5.5"
 # 🟢>>>>>>>>>>>本地脚本<<<<<<<<<<<<<<<🟢
 [Script]
 cron "0 0 * * *" then script("https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js") with tag="今日黄历", img_url="https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/friDay.png", timeout=10
@@ -154,20 +152,20 @@ atlasmix = select,香港节点,台湾节点,美国节点,韩国节点,日本节�
 ChatGPT = select,美国节点,CloudProfit,日本节点,香港节点,台湾节点,韩国节点,狮城节点,订阅组,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Myspace.png
 iCloud = select,日本节点,狮城节点,韩国节点,美国节点,台湾节点,香港节点,Global[Auto],DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Account.png
 bilibili = select,DIRECT,Global[Auto],Lowdelay,香港节点,台湾节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
-Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 900,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
-Lowdelay = url-test,flowers,Kitty,Lx,url = http://www.gstatic.com/generate_204,interval = 900,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Buzznet.png
-香港节点 = url-test,香港,url = http://www.gstatic.com/generate_204,interval = 3600,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-台湾节点 = url-test,台湾,url = http://www.gstatic.com/generate_204,interval = 3600,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
-美国节点 = url-test,美国,url = http://www.gstatic.com/generate_204,interval = 3600,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-韩国节点 = url-test,韩国,url = http://www.gstatic.com/generate_204,interval = 3600,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
-日本节点 = url-test,日本,url = http://www.gstatic.com/generate_204,interval = 3600,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-狮城节点 = url-test,狮城,url = http://www.gstatic.com/generate_204,interval = 3600,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/American_Samoa.png
+Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
+Lowdelay = url-test,flowers,Kitty,Lx,url = http://www.gstatic.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Buzznet.png
+香港节点 = url-test,香港,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+台湾节点 = url-test,台湾,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+美国节点 = url-test,美国,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+韩国节点 = url-test,韩国,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+日本节点 = url-test,日本,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+狮城节点 = url-test,狮城,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
 # 🟢>>>>>>>>>>>规则分流<<<<<<<<<<<<<<<🟢
 [Remote Rule]
 https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9VbmJyZWFrLmxpc3Q, policy=DIRECT, tag=flowers, enabled=true
 https://github.com/VirgilClyne/GetSomeFries/raw/main/ruleset/HTTPDNS.Block.list, policy=REJECT, tag=HTTPDNS, enabled=true
-https://yfamilys.com/rule/ADLite.list, policy=REJECT, tag=KillAD, enabled=true
-https://github.com/Moli-X/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=KillAD, enabled=true
+https://yfamilys.com/rule/ADLite.list, policy=REJECT, tag=ADLite, enabled=true
+https://github.com/Moli-X/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=MoliReject, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=ChatGPT, tag=AI, enabled=true
 https://rule.kelee.one/Loon/Gemini.lsr, policy=ChatGPT, tag=Gemini.lsr, enabled=true
 https://raw.githubusercontent.com/yuumimi/rules/refs/heads/release/loon/apple-intelligence.txt, policy=ChatGPT, tag=AppleAI, enabled=true
@@ -190,9 +188,8 @@ https://rule.kelee.one/Loon/Netflix.lsr, policy=Tk/Th, tag=Netflix, enabled=true
 https://rule.kelee.one/Loon/GitHub.lsr, policy=CloudProfit, tag=GitHub, enabled=true
 https://rule.kelee.one/Loon/Cloudflare.lsr, policy=CloudProfit, tag=Cloudflare, enabled=true
 https://rule.kelee.one/Loon/AppleProxy.lsr, policy=iCloud, tag=AppleProxy, enabled=true
-https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9HbG9iYWwubGlzdA, policy=CloudProfit, tag=Proxy, enabled=true
-https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9DaGluYS5saXN0, policy=DIRECT, tag=Link, enabled=true
-https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9Mb2NhbEFyZWFOZXR3b3JrLmxpc3Q, policy=DIRECT, tag=Link, enabled=true
+https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9DaGluYS5saXN0, policy=DIRECT, tag=ChinaList, enabled=true
+https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9Mb2NhbEFyZWFOZXR3b3JrLmxpc3Q, policy=DIRECT, tag=LocalAreaNetwork, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestChina.lsr, policy=DIRECT, tag=SpeedtestChina, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr, policy=DIRECT, tag=SpeedtestInternational, enabled=true
@@ -201,6 +198,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://rule.kelee.one/Loon/ChinaIPs.lsr, policy=DIRECT, tag=Geip, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN, enabled=true
 # 🟢>>>>>>>>>>>远程脚本<<<<<<<<<<<<<<<🟢
+https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9HbG9iYWwubGlzdA, policy=CloudProfit, tag=Proxy, enabled=true
 [Remote Script]
 # 🟢>>>>>>>>>>>插件模块<<<<<<<<<<<<<<<🟢
 [Plugin]
@@ -261,7 +259,6 @@ https://subweb.s3.fr-par.scw.cloud/Module/embyUnlocked.plugin, tag=Emby, img-url
 https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Module/mediadown.sgmodule, img-url=square.and.arrow.down.on.square, enabled=true
 # 🟢>>>>>>>>>>>映射功能<<<<<<<<<<<<<<<🟢
 [Host]
-*testflight.apple.com = server:119.29.29.29
 dl.google.com = server:119.29.29.29
 dl.l.google.com = server:119.29.29.29
 63182sh8-4d7b.aws-agent.net = 37f36sh0-2fd9.apt-agent.net
@@ -269,13 +266,13 @@ dl.l.google.com = server:119.29.29.29
 8bf71bj7-dc2c.aws-agent.net = 6b305bj0-f5x7.apt-agent.net
 # 🟢>>>>>>>>>>>节点筛选<<<<<<<<<<<<<<<🟢
 [Remote Filter]
-全部 = NameRegex, FilterKey = "^(?!.*网易云)"
-香港 = NameRegex, FilterKey = "(?i)(港|香港|HK|Hong)"
-台湾 = NameRegex, FilterKey = "(?i)(台|台湾|TW|Taiwan)"
-韩国 = NameRegex, FilterKey = "(?i)(韩国|首尔|仁川|济州市|釜山|高阳市|SouthKorea|SK|Korea)"
-日本 = NameRegex, FilterKey = "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
-美国 = NameRegex, FilterKey = "(?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)"
-狮城 = NameRegex, FilterKey = "(?i)(新加坡|坡|狮城|SG|Singapore)"
+全部 = NameRegex, FilterKey = "(?i)^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|地址|频道|无法|说明|使用|提示|特别|访问|支持|\b(USE|USED|TOTAL|EXPIRE|EMAIL|PANEL)\b)).*$"
+香港 = NameRegex, FilterKey = "(?i)(🇭🇰|香港|港|HK|Hong)"
+台湾 = NameRegex, FilterKey = "(?i)(🇹🇼|台湾|台|TW|Taiwan)"
+韩国 = NameRegex, FilterKey = "(?i)(🇰🇷|韩国|首尔|仁川|济州|济州市|釜山|高阳市|SouthKorea|SK|Korea)"
+日本 = NameRegex, FilterKey = "(?i)(🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
+美国 = NameRegex, FilterKey = "(?i)(🇺🇸|美国|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)"
+狮城 = NameRegex, FilterKey = "(?i)(🇸🇬|新加坡|坡|狮城|SG|Singapore)"
 # 🟢>>>>>>>>>>>其他配置<<<<<<<<<<<<<<<🟢
 [Proxy]
 [URL Rewrite]
@@ -288,6 +285,7 @@ request if ${url} ~= /^https:\/\/github\.com\//i then request.header.set("Accept
 https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Rewrite/AutoRewrite_Example.list,auto
 # 🟢>>>>>>>>>>>证书MITM<<<<<<<<<<<<<<🟢
 [MITM]
+enable = true
 hostname = dig.bdurl.net,api.iturrit.com,i.lcsignx.com,otheve.beacon.qq.com,toblog.ctobsnssdk.com,api-access.pangolin-sdk-toutiao1.com
 ca-p12 = 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
 ca-passphrase = 1MNK9843
