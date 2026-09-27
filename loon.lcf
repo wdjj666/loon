@@ -162,18 +162,18 @@ Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interva
 狮城节点 = url-test,狮城,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
 # 🟢>>>>>>>>>>>规则分流<<<<<<<<<<<<<<<🟢
 [Remote Rule]
-https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9VbmJyZWFrLmxpc3Q, policy=DIRECT, tag=flowers, enabled=true
+https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/loon/apns.list, policy=DIRECT, tag=Apns, enabled=true
 https://github.com/VirgilClyne/GetSomeFries/raw/main/ruleset/HTTPDNS.Block.list, policy=REJECT, tag=HTTPDNS, enabled=true
 https://yfamilys.com/rule/ADLite.list, policy=REJECT, tag=ADLite, enabled=true
 https://github.com/Moli-X/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=MoliReject, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=ChatGPT, tag=AI, enabled=true
-https://rule.kelee.one/Loon/Gemini.lsr, policy=ChatGPT, tag=Gemini.lsr, enabled=true
+https://rule.kelee.one/Loon/OpenAI.lsr, policy=ChatGPT, tag=OpenAI, enabled=true
+https://rule.kelee.one/Loon/Gemini.lsr, policy=ChatGPT, tag=Gemini, enabled=true
 https://raw.githubusercontent.com/yuumimi/rules/refs/heads/release/loon/apple-intelligence.txt, policy=ChatGPT, tag=AppleAI, enabled=true
 https://rule.kelee.one/Loon/Claude.lsr, policy=ChatGPT, tag=Claude, enabled=true
-https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/loon/apns.list, policy=Other, tag=apns.list, enabled=true
-https://rule.kelee.one/Loon/Instagram.lsr, policy=Instagram, tag=Instagram.lsr, enabled=true
-https://rule.kelee.one/Loon/BiliBili.lsr, policy=bilibili, tag=BiliBili.lsr, enabled=true
-https://rule.kelee.one/Loon/Microsoft.lsr, policy=Other, tag=Microsoft.lsr, enabled=true
+https://rule.kelee.one/Loon/Instagram.lsr, policy=Instagram, tag=Instagram, enabled=true
+https://rule.kelee.one/Loon/BiliBili.lsr, policy=bilibili, tag=BiliBili, enabled=true
+https://rule.kelee.one/Loon/Microsoft.lsr, policy=Other, tag=Microsoft, enabled=true
 https://rule.kelee.one/Loon/YouTube.lsr, policy=Tk/Th, tag=YouTube, enabled=true
 https://rule.kelee.one/Loon/Twitter.lsr, policy=Twitter, tag=Twitter, enabled=true
 https://rule.kelee.one/Loon/TikTok.lsr, policy=Tk/Th, tag=Tiktok, enabled=true
@@ -183,11 +183,11 @@ https://rule.kelee.one/Loon/Spotify.lsr, policy=Spotify, tag=Spotify, enabled=tr
 https://rule.kelee.one/Loon/Reddit.lsr, policy=CloudProfit, tag=Reddit, enabled=true
 https://rule.kelee.one/Loon/Pinterest.lsr, policy=Other, tag=Pinterest, enabled=true
 https://rule.kelee.one/Loon/Picacg.lsr, policy=atlasmix, tag=Picacg, enabled=true
-https://rule.kelee.one/Loon/OpenAI.lsr, policy=ChatGPT, tag=OpenAI, enabled=true
 https://rule.kelee.one/Loon/Netflix.lsr, policy=Tk/Th, tag=Netflix, enabled=true
 https://rule.kelee.one/Loon/GitHub.lsr, policy=CloudProfit, tag=GitHub, enabled=true
 https://rule.kelee.one/Loon/Cloudflare.lsr, policy=CloudProfit, tag=Cloudflare, enabled=true
 https://rule.kelee.one/Loon/AppleProxy.lsr, policy=iCloud, tag=AppleProxy, enabled=true
+https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9VbmJyZWFrLmxpc3Q, policy=DIRECT, tag=Flowers, enabled=true
 https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9DaGluYS5saXN0, policy=DIRECT, tag=ChinaList, enabled=true
 https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9Mb2NhbEFyZWFOZXR3b3JrLmxpc3Q, policy=DIRECT, tag=LocalAreaNetwork, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
@@ -197,8 +197,8 @@ https://rule.kelee.one/Loon/China.lsr, policy=DIRECT, tag=China, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaASN/ChinaASN.list, policy=DIRECT, tag=ASN, enabled=true
 https://rule.kelee.one/Loon/ChinaIPs.lsr, policy=DIRECT, tag=Geip, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN, enabled=true
-# 🟢>>>>>>>>>>>远程脚本<<<<<<<<<<<<<<<🟢
 https://api-huacloud.com/getruleset?type=1&url=UHJvZmlsZXMvU3VyZ2UvUnVsZXNldC9HbG9iYWwubGlzdA, policy=CloudProfit, tag=Proxy, enabled=true
+# 🟢>>>>>>>>>>>远程脚本<<<<<<<<<<<<<<<🟢
 [Remote Script]
 # 🟢>>>>>>>>>>>插件模块<<<<<<<<<<<<<<<🟢
 [Plugin]
