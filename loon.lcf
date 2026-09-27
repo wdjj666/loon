@@ -140,20 +140,20 @@ generic then script("https://raw.githubusercontent.com/Loon0x00/LoonExampleConfi
 generic then script("https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js") with tag="GPTCheck", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1818292.png", timeout=10
 # 🟢>>>>>>>>>>>功能策略<<<<<<<<<<<<<<<🟢
 [Proxy Group]
+AI专线 = select,flowers,url = http://www.gstatic.com/generate_204,img-url = rectangle.3.group.bubble.left.fill
 订阅组 = select,flowers,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/FI.png
-Other = select,CloudProfit,Global[Auto],Lowdelay,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,DIRECT,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
-Twitter = select,CloudProfit,Global[Auto],Lowdelay,香港节点,韩国节点,台湾节点,美国节点,日本节点,狮城节点,订阅组,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
-Tk/Th = select,狮城节点,日本节点,美国节点,韩国节点,台湾节点,香港节点,Lowdelay,Global[Auto],CloudProfit,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Threads.png
-Instagram = select,CloudProfit,Global[Auto],Lowdelay,香港节点,台湾节点,韩国节点,日本节点,狮城节点,美国节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
-Telegram = select,CloudProfit,Global[Auto],Lowdelay,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Tagged.png
-CloudProfit = select,Global[Auto],Lowdelay,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
-Spotify = select,CloudProfit,Global[Auto],Lowdelay,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
-atlasmix = select,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,Lowdelay,Global[Auto],CloudProfit,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PH.png
-ChatGPT = select,美国节点,CloudProfit,日本节点,香港节点,台湾节点,韩国节点,狮城节点,订阅组,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Myspace.png
+Other = select,CloudProfit,Global[Auto],AI专线,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,DIRECT,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
+Twitter = select,CloudProfit,Global[Auto],AI专线,香港节点,韩国节点,台湾节点,美国节点,日本节点,狮城节点,订阅组,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+Tk/Th = select,狮城节点,日本节点,美国节点,韩国节点,台湾节点,香港节点,AI专线,Global[Auto],CloudProfit,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Threads.png
+Instagram = select,CloudProfit,Global[Auto],AI专线,香港节点,台湾节点,韩国节点,日本节点,狮城节点,美国节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
+Telegram = select,CloudProfit,Global[Auto],AI专线,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Tagged.png
+CloudProfit = select,Global[Auto],AI专线,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
+Spotify = select,CloudProfit,Global[Auto],AI专线,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
+atlasmix = select,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,AI专线,Global[Auto],CloudProfit,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PH.png
+ChatGPT = select,美国节点,AI专线,订阅组,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChatGPT.png
 iCloud = select,日本节点,狮城节点,韩国节点,美国节点,台湾节点,香港节点,Global[Auto],DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Account.png
-bilibili = select,DIRECT,Global[Auto],Lowdelay,香港节点,台湾节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
-Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
-Lowdelay = url-test,flowers,Kitty,Lx,url = http://www.gstatic.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Buzznet.png
+bilibili = select,DIRECT,Global[Auto],AI专线,香港节点,台湾节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
+Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 60000,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
 香港节点 = url-test,香港,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 台湾节点 = url-test,台湾,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 美国节点 = url-test,美国,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
