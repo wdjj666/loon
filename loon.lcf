@@ -5,14 +5,14 @@
 [General]
 ipv6-vif = off
 test-timeout = 5
-ip-mode = v4-only
+ip-mode = dual
 dns-server = system,119.29.29.29,223.5.5.5
 sni-sniffing = true
 allow-udp-proxy = true
 disable-stun = false
 interface-mode = auto
 fast-switch = true
-domain-reject-mode = Request
+domain-reject-mode = DNS
 allow-wifi-access = false
 udp-fallback-mode = DIRECT
 mitm-on-wifi-access = false
