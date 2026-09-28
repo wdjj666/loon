@@ -30,6 +30,7 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 real-ip = msftconnecttest.com,msftncsi.com,*.msftconnecttest.com,*.msftncsi.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,*.battlenet.com.cn,*.battlenet.com,*.blzstatic.cn,*.battle.net
 # 🟢>>>>>>>>>>>本地规则<<<<<<<<<<<<<<<🟢
 [Rule]
+DOMAIN,feeds.viking-links.tech,Other
 # ==============================
 # 局域网
 # ==============================
@@ -123,7 +124,7 @@ IP-CIDR,149.88.82.119/32,REJECT
 FINAL,DIRECT
 # ⛔️>>>>>>>>>>>大宝键666<<<<<<<<<<<<<<<⛔️
 [Remote Proxy]
-flowers = https://api-huacloud.com/sub?target=loon&insert=true&emoji=true&tfo=true&filename=Flower_Trojan&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Ftoken2%3Dypvw85zy-ec4de8428cu7ed0mbo,parser-enabled = true,udp=true,block-quic=false,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png,server-dns="223.5.5.5"
+Kendall = https://train.suuwu.de/api/linkon?token=7133c983d9572d9d60ff7eee755555a6&protocol=anytls,parser-enabled = true,udp=true,block-quic=false,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png
 Kitty = https://m1.tohno-1.top/oosaka/3354c8c5543fd31976cf847f69717d4e,parser-enabled = true,udp=true,block-quic=false,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png,server-dns="223.5.5.5"
 Lx = https://liangxin.xyz/api/v1/liangxin?OwO=5577fa7baa4c2b57a121e097b0cd376e,parser-enabled = true,udp=true,block-quic=false,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_News.png,server-dns="223.5.5.5"
 # 🟢>>>>>>>>>>>本地脚本<<<<<<<<<<<<<<<🟢
@@ -140,19 +141,19 @@ generic then script("https://raw.githubusercontent.com/Loon0x00/LoonExampleConfi
 generic then script("https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js") with tag="GPTCheck", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1818292.png", timeout=10
 # 🟢>>>>>>>>>>>功能策略<<<<<<<<<<<<<<<🟢
 [Proxy Group]
-AI专线 = select,flowers,url = http://www.gstatic.com/generate_204,img-url = rectangle.3.group.bubble.left.fill
-订阅组 = select,flowers,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/FI.png
-Other = select,CloudProfit,Global[Auto],AI专线,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,DIRECT,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
-Twitter = select,CloudProfit,Global[Auto],AI专线,香港节点,韩国节点,台湾节点,美国节点,日本节点,狮城节点,订阅组,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
-Tk/Th = select,狮城节点,日本节点,美国节点,韩国节点,台湾节点,香港节点,AI专线,Global[Auto],CloudProfit,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Threads.png
-Instagram = select,CloudProfit,Global[Auto],AI专线,香港节点,台湾节点,韩国节点,日本节点,狮城节点,美国节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
-Telegram = select,CloudProfit,Global[Auto],AI专线,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Tagged.png
-CloudProfit = select,Global[Auto],AI专线,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
-Spotify = select,CloudProfit,Global[Auto],AI专线,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
-atlasmix = select,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,AI专线,Global[Auto],CloudProfit,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PH.png
+订阅组 = select,Kendall,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/FI.png
+AI专线 = select,Kendall,url = http://www.gstatic.com/generate_204,img-url = rectangle.3.group.bubble.left.fill
+Other = select,订阅组,CloudProfit,Global[Auto],DIRECT,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
+Twitter = select,订阅组,CloudProfit,Global[Auto],DIRECT,香港节点,韩国节点,台湾节点,美国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+Tk/Th = select,狮城节点,日本节点,美国节点,韩国节点,台湾节点,香港节点,Global[Auto],CloudProfit,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Threads.png
+Instagram = select,CloudProfit,Global[Auto],香港节点,台湾节点,韩国节点,日本节点,狮城节点,美国节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
+Telegram = select,订阅组,CloudProfit,Global[Auto],香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Tagged.png
+CloudProfit = select,订阅组,Global[Auto],香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
+Spotify = select,DIRECT,CloudProfit,Global[Auto],香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
+atlasmix = select,订阅组,Global[Auto],CloudProfit,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PH.png
 ChatGPT = select,美国节点,AI专线,订阅组,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChatGPT.png
-iCloud = select,日本节点,狮城节点,韩国节点,美国节点,台湾节点,香港节点,Global[Auto],DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Account.png
-bilibili = select,DIRECT,Global[Auto],AI专线,香港节点,台湾节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
+iCloud = select,CloudProfit,Global[Auto],DIRECT,日本节点,狮城节点,韩国节点,美国节点,台湾节点,香港节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Account.png
+bilibili = select,CloudProfit,Global[Auto],DIRECT,香港节点,台湾节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png
 Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 60000,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
 香港节点 = url-test,香港,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 台湾节点 = url-test,台湾,url = http://www.gstatic.com/generate_204,interval = 1800,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
