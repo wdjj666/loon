@@ -146,7 +146,7 @@ AI专线 = select,Kendall,url = http://www.gstatic.com/generate_204,img-url = re
 Other = select,订阅组,CloudProfit,Global[Auto],DIRECT,香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
 Twitter = select,订阅组,CloudProfit,Global[Auto],DIRECT,香港节点,韩国节点,台湾节点,美国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 Tk/Th = select,狮城节点,日本节点,美国节点,韩国节点,台湾节点,香港节点,Global[Auto],CloudProfit,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Threads.png
-Instagram = select,CloudProfit,Global[Auto],香港节点,台湾节点,韩国节点,日本节点,狮城节点,美国节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
+Instagram = select,CloudProfit,Global[Auto],香港节点,台湾节点,韩国节点,日本节点,狮城节点,美国节点,订阅组,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
 Telegram = select,订阅组,CloudProfit,Global[Auto],香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Tagged.png
 CloudProfit = select,订阅组,Global[Auto],香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
 Spotify = select,DIRECT,CloudProfit,Global[Auto],香港节点,台湾节点,美国节点,韩国节点,日本节点,狮城节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
@@ -208,8 +208,6 @@ https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/TelegramRedirect.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, pin=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin, pin=true, enabled=true
-https://yfamilys.com/plugin/adlite.plugin, pin=true, enabled=true
-https://yfamilys.com/plugin/AdBlock.plugin, pin=true, enabled=true
 https://raw.githubusercontent.com/mphin/proxy_tools/main/loon/plugin/github.plugin, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/github.png, enabled=true
 https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.lpx, enabled=true
 https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Maps.plugin, enabled=true
