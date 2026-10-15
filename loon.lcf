@@ -6,10 +6,10 @@
 ipv6-vif = off
 test-timeout = 5
 ip-mode = v4-only
-dns-server = system,119.29.29.29,223.5.5.5,8.8.8.8
+dns-server = system,119.29.29.29,223.5.5.5
 sni-sniffing = true
 allow-udp-proxy = true
-disable-stun = true
+disable-stun = false
 interface-mode = auto
 fast-switch = true
 domain-reject-mode = DNS
@@ -27,7 +27,7 @@ geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
 ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
 skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,127.0.0.1/32,localhost,*.local
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
-real-ip = msftconnecttest.com,msftncsi.com,*.msftconnecttest.com,*.msftncsi.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,*.battlenet.com.cn,*.battlenet.com,*.blzstatic.cn,*.battle.net,*.qq.com
+real-ip = msftconnecttest.com,msftncsi.com,*.msftconnecttest.com,*.msftncsi.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,*.battlenet.com.cn,*.battlenet.com,*.blzstatic.cn,*.battle.net,*.qq.com,*.igamecj.com,*.gcloudsys.com
 # 🟢>>>>>>>>>>>本地规则<<<<<<<<<<<<<<<🟢
 [Rule]
 # ==============================
@@ -49,59 +49,61 @@ DOMAIN-SUFFIX,qpic.cn,DIRECT
 # ==============================
 # 国内服务
 # ==============================
-DOMAIN,aweme.snssdk.com,DIRECT
 DOMAIN-SUFFIX,api-huacloud.com,DIRECT
 DOMAIN-SUFFIX,taobaocdn.com,DIRECT
+DOMAIN-SUFFIX,deepseek.com,DIRECT
 DOMAIN-SUFFIX,taobaodc.com,DIRECT
 DOMAIN-SUFFIX,jsdelivr.net,DIRECT
 DOMAIN-SUFFIX,lcsignx.com,DIRECT
-DOMAIN,dc.sigmob.cn,DIRECT
 DOMAIN,apmplus.volces.com,DIRECT
-DOMAIN,httpdns.volcengineapi.com,DIRECT
-DOMAIN,wclg.art,DIRECT
 DOMAIN,box-api.25mao.com,DIRECT
+DOMAIN,www.nsloon.com,DIRECT
+DOMAIN,dc.sigmob.cn,DIRECT
 DOMAIN,liangxin.xyz,DIRECT
+DOMAIN,wclg.art,DIRECT
 # ==============================
 # Apple
 # ==============================
 DOMAIN,sync.itunes.apple.com,DIRECT
-# # ==============================
+# ==============================
 # Telegram
 # ==============================
-DOMAIN-SUFFIX,iturrit.com,DIRECT
+DOMAIN-SUFFIX,iturrit.com,CloudProfit
+# ==============================
+# AI
+# ==============================
+DOMAIN-SUFFIX,geminiactivation.com,AI专线
 # ==============================
 # 国际网站
 # ==============================
-DOMAIN,ehgt.org,Atlasmix
-DOMAIN-SUFFIX,18comic.vip,台湾节点
-DOMAIN-SUFFIX,forgecdn.net,DIRECT
+DOMAIN,feeds.viking-links.tech,CloudProfit
+DOMAIN-SUFFIX,forgecdn.net,CloudProfit
+DOMAIN-SUFFIX,yfamilys.com,CloudProfit
+DOMAIN,ddgksf2013.top,CloudProfit
+DOMAIN,saucenao.com,CloudProfit
 DOMAIN-SUFFIX,clevertap-prod.com,CloudProfit
-DOMAIN,feeds.viking-links.tech,DIRECT
+DOMAIN,ehgt.org,Atlasmix
+DOMAIN-SUFFIX,18comic.vip,Atlasmix
 DOMAIN-SUFFIX,longhubconnect.com,Atlasmix
-DOMAIN-SUFFIX,yfamilys.com,DIRECT
-DOMAIN,ddgksf2013.top,DIRECT
 DOMAIN-SUFFIX,manwa.me,Atlasmix
 DOMAIN-SUFFIX,fuwbm.cc,Atlasmix
 DOMAIN-SUFFIX,kelee.one,CloudProfit
 DOMAIN,ws.convertio.me,CloudProfit
 DOMAIN-SUFFIX,hath.network,Atlasmix
 DOMAIN-SUFFIX,myreadingmanga.info,Atlasmix
+DOMAIN-SUFFIX,jmdanjonproxy.xyz,Atlasmix
+DOMAIN-SUFFIX,gold-usergeneratedcontent.net,Atlasmix
 DOMAIN-SUFFIX,cdnhth.club,Atlasmix
 DOMAIN-SUFFIX,picacomic.com,Atlasmix
 DOMAIN-SUFFIX,e-hentai.org,Atlasmix
 DOMAIN-SUFFIX,hentai.org,Atlasmix
-DOMAIN-SUFFIX,gold-usergeneratedcontent.net,Atlasmix
 DOMAIN-SUFFIX,nhentai.net,Atlasmix
-DOMAIN,www.nsloon.com,DIRECT
-DOMAIN,saucenao.com,DIRECT
 DOMAIN,jmcomica.vip,Atlasmix
-DOMAIN-SUFFIX,jmdanjonproxy.xyz,Atlasmix
-DOMAIN-SUFFIX,vercel.app,DIRECT
 # ==============================
 # 广告 / 无用连接拦截
 # ==============================
 DOMAIN-SUFFIX,yuming.url,REJECT
-IP-CIDR,149.88.82.119/32,REJECT
+IP-CIDR,149.88.82.119/32,REJECT,no-resolve
 # ==============================
 FINAL,CloudProfit
 # ⛔️>>>>>>>>>>>大宝键666<<<<<<<<<<<<<<<⛔️
@@ -123,14 +125,14 @@ generic then script("https://raw.githubusercontent.com/Loon0x00/LoonExampleConfi
 generic then script("https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js") with tag="GPTCheck", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1818292.png", timeout=10
 # 🟢>>>>>>>>>>>功能策略<<<<<<<<<<<<<<<🟢
 [Proxy Group]
-规则策略 = select,规则专线,香港节点,日本节点,台湾节点,狮城节点,韩国节点,美国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png
+规则策略 = select,AI专线,规则专线,香港节点,日本节点,台湾节点,狮城节点,韩国节点,美国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png
 规则专线 = select,Kendall,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/FI.png
 AI专线 = select,AIRule,CloudProfit,规则专线,香港节点,日本节点,台湾节点,美国节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChatGPT.png
-CloudProfit = select,规则专线,Global[Auto],香港节点,日本节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
+CloudProfit = select,Global[Auto],规则策略,香港节点,日本节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
 Atlasmix = select,规则策略,CloudProfit,香港节点,台湾节点,日本节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PH.png
 AIRule = select,Kendall,url = http://www.gstatic.com/generate_204,img-url = rectangle.3.group.bubble.left.fill
-iCloud = select,CloudProfit,规则专线,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Account.png
-Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 6000,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
+iCloud = select,CloudProfit,规则策略,规则专线,DIRECT,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Account.png
+Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AU.png
 香港节点 = url-test,香港,url = http://www.gstatic.com/generate_204,interval = 7200,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 台湾节点 = url-test,台湾,url = http://www.gstatic.com/generate_204,interval = 7200,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 美国节点 = url-test,美国,url = http://www.gstatic.com/generate_204,interval = 7200,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
@@ -139,29 +141,27 @@ Global[Auto] = url-test,全部,url = http://www.gstatic.com/generate_204,interva
 狮城节点 = url-test,狮城,url = http://www.gstatic.com/generate_204,interval = 7200,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/American_Samoa.png
 # 🟢>>>>>>>>>>>规则分流<<<<<<<<<<<<<<<🟢
 [Remote Rule]
-https://github.com/wdjj666/LinkRule/raw/refs/heads/main/KillDNS.list, policy=REJECT, tag=KillDNS, enabled=true
 https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/loon/apns.list, policy=DIRECT, tag=Apns, enabled=true
-https://rule.kelee.one/Loon/China.lsr, policy=DIRECT, tag=China, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaASN/ChinaASN.list, policy=DIRECT, tag=ASN, enabled=true
-https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
-https://rule.kelee.one/Loon/ChinaIPs.lsr, policy=DIRECT, tag=Geip, enabled=true
-https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestChina.lsr, policy=DIRECT, tag=SpeedtestChina, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr, policy=DIRECT, tag=SpeedtestInternational, enabled=true
-https://github.com/dler-io/Rules/raw/refs/heads/main/Surge/Surge%203/Provider/AI%20Suite.list, policy=AI专线, tag=AIProxy, enabled=true
+https://github.com/dler-io/Rules/raw/refs/heads/main/Surge/Surge%203/Provider/AI%20Suite.list, policy=AI专线, tag=AISuite, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI专线, tag=AIProxy, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=CloudProfit, tag=Proxy, enabled=true
-https://github.com/dler-io/Rules/raw/refs/heads/main/Surge/Surge%203/Provider/Proxy.list, policy=CloudProfit, tag=Proxy, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Proxy/Proxy_Domain.list, policy=CloudProfit, tag=Domain, enabled=true
 https://rule.kelee.one/Loon/AppleProxy.lsr, policy=iCloud, tag=AppleProxy, enabled=true
+https://rule.kelee.one/Loon/China.lsr, policy=DIRECT, tag=China, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=CloudProfit, tag=Proxy, enabled=true
+https://github.com/dler-io/Rules/raw/refs/heads/main/Surge/Surge%203/Provider/Proxy.list, policy=CloudProfit, tag=Proxy_Dler, enabled=true
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
+https://rule.kelee.one/Loon/ChinaIPs.lsr, policy=DIRECT, tag=Geip, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaASN/ChinaASN.list, policy=DIRECT, tag=ASN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN, enabled=true
 # 🟢>>>>>>>>>>>远程脚本<<<<<<<<<<<<<<<🟢
 [Remote Script]
 # 🟢>>>>>>>>>>>插件模块<<<<<<<<<<<<<<<🟢
 [Plugin]
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
-https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=CloudProfit, pin=true, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin, policy=CloudProfit, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, pin=true, enabled=true
 https://raw.githubusercontent.com/mc2u/Loon/refs/heads/main/Plugins/loon_resource_parser.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/TelegramRedirect.lpx, enabled=true
 https://raw.githubusercontent.com/mphin/proxy_tools/main/loon/plugin/github.plugin, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/github.png, enabled=true
@@ -191,7 +191,7 @@ https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/AliYunDrive_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, policy=CloudProfit, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/XiaomiSpeaker_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
@@ -201,7 +201,6 @@ https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/DuiTang_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/KuaiShou_remove_ads.lpx, enabled=true
-https://github.com/Moli-X/Tool/raw/X/Loon/Plugin/Kelee/RedPaper_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx, enabled=true
 https://github.com/Moli-X/Tool/raw/X/Loon/Plugin/Kelee/Spotify.plugin, tag=Spotify歌词, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png, enabled=true
