@@ -30,6 +30,7 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 real-ip = msftconnecttest.com,msftncsi.com,*.msftconnecttest.com,*.msftncsi.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,*.battlenet.com.cn,*.battlenet.com,*.blzstatic.cn,*.battle.net,*.qq.com,*.igamecj.com,*.gcloudsys.com
 # 🟢>>>>>>>>>>>本地规则<<<<<<<<<<<<<<<🟢
 [Rule]
+DOMAIN,kendeji.io,DIRECT
 # ==============================
 # 腾讯游戏业务
 DOMAIN-SUFFIX,igamecj.com,DIRECT
@@ -125,7 +126,7 @@ generic then script("https://raw.githubusercontent.com/Loon0x00/LoonExampleConfi
 generic then script("https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js") with tag="GPTCheck", img_url="https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute1/1818292.png", timeout=10
 # 🟢>>>>>>>>>>>功能策略<<<<<<<<<<<<<<<🟢
 [Proxy Group]
-规则策略 = select,AI专线,规则专线,香港节点,日本节点,台湾节点,狮城节点,韩国节点,美国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png
+规则策略 = select,AI专线,规则专线,香港节点,日本节点,台湾节点,狮城节点,韩国节点,美国节点,Global[Auto],img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png
 规则专线 = select,Kendall,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/FI.png
 AI专线 = select,AIRule,CloudProfit,规则专线,香港节点,日本节点,台湾节点,美国节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChatGPT.png
 CloudProfit = select,Global[Auto],规则策略,香港节点,日本节点,url = http://www.gstatic.com/generate_204,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png
